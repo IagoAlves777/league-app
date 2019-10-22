@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:leagueapp/Homepage.dart';
+import 'package:leagueapp/homepage.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'ChampionAudio.dart';
+import 'champion_audio.dart';
 import 'models/champions.dart';
-
 class AudioButton extends StatelessWidget {
   final Champion champion;
   AudioButton(this.champion);

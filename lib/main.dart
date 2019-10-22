@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:leagueapp/Homepage.dart';
+import 'package:leagueapp/homepage.dart';
 
 void main(){
   runApp(new MaterialApp(

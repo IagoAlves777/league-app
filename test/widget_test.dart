@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:leagueapp/Homepage.dart';
+import 'package:leagueapp/homepage.dart';
 import 'package:leagueapp/main.dart';
 
 void main() {
