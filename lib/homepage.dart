@@ -57,14 +57,21 @@ class _HomePageState extends State<HomePage> {
           itemBuilder: (BuildContext context, int index) {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical:8),
-              child: Text(
-                items[index],
-                style: TextStyle(
-                  fontSize: 26,
-                  fontFamily: 'AmaticSC Bold',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              child: ListTile(
+                 leading: CircleAvatar(
+                 backgroundImage: NetworkImage("https://ddragon.leagueoflegends.com/cdn/9.21.1/img/champion/Kaisa.png"),
                 ),
+                 onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ChampionAudio())
+                ),
+                  title: Text(items[index],
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontFamily: 'AmaticSC Bold',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),),
               ),
             );
           }
