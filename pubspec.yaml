@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
   audioplayers: ^0.13.2
   dio: 1.0.0
-
+  path_provider: 1.4.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -33,12 +33,13 @@ flutter:
 
   uses-material-design: true
   assets:
-    - imagens/lol.png
-    - imagens/LuluSquare.png
-    - imagens/IconHomePage.png
-    - imagens/Lulu.png
-    - imagens/champions.png
-    - imagens/LuluBottom.png
+    - assets/lol.png
+    - assets/LuluSquare.png
+    - assets/IconHomePage.png
+    - assets/Lulu.png
+    - assets/champions.png
+    - assets/LuluBottom.png
+    - assets/data.json
 
   fonts:
     - family: Pacifico

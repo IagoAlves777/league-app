@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "311321994445",
+    "firebase_url": "https://league-app-e4ad8.firebaseio.com",
+    "project_id": "league-app-e4ad8",
+    "storage_bucket": "league-app-e4ad8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311321994445:android:8fb8b8ec24dc2a7f367584",
+        "android_client_info": {
+          "package_name": "com.example.leagueapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311321994445-u5ninku5pe33o8at6qfa4ln1gi8qiusc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8T7-HdrEHEziW05UCc1PRuz-DH4qvVSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311321994445-u5ninku5pe33o8at6qfa4ln1gi8qiusc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

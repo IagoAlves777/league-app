@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:leagueapp/button.dart';
 import 'package:leagueapp/champion_audio.dart';
 import 'package:leagueapp/list_champions.dart';
+
+import 'dictionary_champions.dart';
+
+// import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'dart:async';
 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
+
+
 class _HomePageState extends State<HomePage> {
   var items = List<String>();
-
-  @override
-  void initState() {
-    items.addAll(duplicateItems);
-    super.initState();
-  }
+  var text = "IMAGEM AQUI";
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +46,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Text(
-          "IMAGEM AQUI",
+          text,
           style: TextStyle(fontFamily: 'AmaticSC Bold', fontSize: 35.0),
         ),
       ),
@@ -59,11 +62,11 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.symmetric(vertical:8),
               child: ListTile(
                  leading: CircleAvatar(
-                 backgroundImage: NetworkImage("https://ddragon.leagueoflegends.com/cdn/9.21.1/img/champion/Kaisa.png"),
+                 backgroundImage: NetworkImage("https://ddragon.leagueoflegends.com/cdn/9.21.1/img/champion/Kaisa.pngw"),
                 ),
                  onTap: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ChampionAudio())
+                MaterialPageRoute(builder: (context) => ChampionAudio(myDictcionaryOfChamphinons['aatrox']))
                 ),
                   title: Text(items[index],
                   style: TextStyle(
