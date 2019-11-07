@@ -19,7 +19,7 @@ class _ChampionAudioState extends State<ChampionAudio>  {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black87,
-        title: Text("Lulu joke",style: TextStyle(
+        title: Text(champion.name + " joke",style: TextStyle(
           fontSize: 26,
           fontFamily: 'AmaticSC Bold',
           fontWeight: FontWeight.bold,

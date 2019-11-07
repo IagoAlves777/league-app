@@ -31,7 +31,7 @@ class AudioButton extends StatelessWidget {
     );
   }
   void play(){
-    playAudio(champion.audio);
+    playAudio(champion.audioURL);
   }
 }
 

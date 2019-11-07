@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:leagueapp/button.dart';
 import 'package:leagueapp/champion_audio.dart';
 import 'package:leagueapp/list_champions.dart';
-
 import 'dictionary_champions.dart';
 
 // import 'package:cloud_firestore/cloud_firestore.dart';
@@ -18,6 +17,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var items = List<String>();
   var text = "IMAGEM AQUI";
+
+  @override
+  void initState() {
+    super.initState();
+    items.addAll(listChampions);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,16 +62,18 @@ class _HomePageState extends State<HomePage> {
     return Expanded(
       child: ListView.builder(
           itemCount: items.length,
-          itemBuilder: (BuildContext context, int index) {
+          itemBuilder: (BuildContext context, int index){
+            final champion = myDictcionaryOfChamphinons[items[index].toLowerCase()];
+
             return Padding(
               padding: const EdgeInsets.symmetric(vertical:8),
               child: ListTile(
                  leading: CircleAvatar(
-                 backgroundImage: NetworkImage("https://ddragon.leagueoflegends.com/cdn/9.21.1/img/champion/Kaisa.pngw"),
+                 backgroundImage: NetworkImage(champion.imageURL),
                 ),
                  onTap: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ChampionAudio(myDictcionaryOfChamphinons['aatrox']))
+                MaterialPageRoute(builder: (context) => ChampionAudio(champion))
                 ),
                   title: Text(items[index],
                   style: TextStyle(
@@ -116,7 +123,7 @@ class _HomePageState extends State<HomePage> {
 
   void filterSearchResults(String query) {
     List<String> dummySearchList = List<String>();
-    dummySearchList.addAll(duplicateItems);
+    dummySearchList.addAll(listChampions);
 
     if (query.isNotEmpty) {
       List<String> dummyListData = List<String>();
@@ -128,12 +135,12 @@ class _HomePageState extends State<HomePage> {
       setState(() {
         items.clear();
         items.addAll(dummyListData);
-      });
+      }); 
       return;
     } else {
       setState(() {
         items.clear();
-        items.addAll(duplicateItems);
+        items.addAll(listChampions);
       });
     }
   }

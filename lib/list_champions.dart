@@ -3,16 +3,7 @@ final listChampions = [
   "Ahri",
   "Akali",
   "Alistar",
-
 ];
-
-final duplicateItems = [
-  "Aatrox",
-  "Ahri",
-  "Akali",
-  "Alistar",
-];
-
 
 // final listChampions = [
 //   "Aatrox",
